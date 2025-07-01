@@ -42,12 +42,15 @@ jobs:
 
 
       - name: Archive app
+        env:
+          IDEDisableFileSync: YES
         run: |
           xcodebuild clean archive \
             -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -archivePath ${{ github.workspace }}/build/DigiHunt.xcarchive \
             -destination 'generic/platform=iOS'
+
 
       - name: Export IPA
         run: |
