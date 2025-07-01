@@ -41,7 +41,7 @@ jobs:
       - name: Archive app
         run: |
           xcodebuild clean archive \
-            -workspace DigiHunt.xcworkspace \
+            -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -archivePath ${{ github.workspace }}/build/DigiHunt.xcarchive \
             -destination 'generic/platform=iOS'
