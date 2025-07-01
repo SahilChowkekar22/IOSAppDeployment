@@ -20,6 +20,16 @@ jobs:
         with:
           xcode-version: '15.3'
 
+      - name: Install CocoaPods if Podfile exists
+        run: |
+          brew install cocoapods || true
+          if [ -f Podfile ]; then
+            echo " Podfile found. Installing..."
+            pod install
+          else
+            echo " No Podfile found. Skipping pod install."
+          fi
+
       - name: Build and test
         run: |
           xcodebuild clean test \
