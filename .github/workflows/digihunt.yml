@@ -20,10 +20,9 @@ jobs:
         with:
           xcode-version: '15.3'
 
-      - name: Install dependencies
-        run: |
-          brew install cocoapods || true
-          pod install
+      - name: Skip CocoaPods (Not used)
+        run: echo "No Podfile - skipping pod install"
+
 
       - name: Build and test
         run: |
