@@ -33,7 +33,7 @@ jobs:
       - name: Build and test
         run: |
           xcodebuild clean test \
-            -workspace DigiHunt.xcodeproj \
+            -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0'
