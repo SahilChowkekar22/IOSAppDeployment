@@ -34,19 +34,23 @@ jobs:
 
       - name: Build and test
         run: |
+          defaults write com.apple.dt.Xcode IDEDisableFileSync -bool YES
           xcodebuild clean test \
             -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0'
 
+
       - name: Archive app
         run: |
-          xcodebuild clean archive \
-            -project DigiHunt.xcodeproj \
-            -scheme DigiHunt \
-            -archivePath ${{ github.workspace }}/build/DigiHunt.xcarchive \
-            -destination 'generic/platform=iOS'
+            defaults write com.apple.dt.Xcode IDEDisableFileSync -bool YES
+            xcodebuild clean archive \
+              -project DigiHunt.xcodeproj \
+              -scheme DigiHunt \
+              -archivePath ${{ github.workspace }}/build/DigiHunt.xcarchive \
+              -destination 'generic/platform=iOS'
+
 
       - name: Export IPA
         run: |
