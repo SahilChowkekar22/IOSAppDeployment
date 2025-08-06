@@ -11,7 +11,8 @@ import SwiftUI
 struct DigiHuntApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            DigimonListView()
         }
     }
 }

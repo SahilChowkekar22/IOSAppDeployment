@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5A11228A2DA00FFD0007A210 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A1122892DA00FF30007A210 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5AF884912D76354700E6D7BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A1122892DA00FF30007A210 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5AF884802D76354500E6D7BA /* DigiHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF884902D76354700E6D7BA /* DigiHuntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiHuntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF8849A2D76354700E6D7BA /* DigiHuntUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiHuntUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		5AF884772D76354500E6D7BA = {
 			isa = PBXGroup;
 			children = (
+				5A1122892DA00FF30007A210 /* README.md */,
 				5AF884822D76354500E6D7BA /* DigiHunt */,
 				5AF884932D76354700E6D7BA /* DigiHuntTests */,
 				5AF8849D2D76354700E6D7BA /* DigiHuntUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11228A2DA00FFD0007A210 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
