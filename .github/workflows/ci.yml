@@ -1,0 +1,36 @@
+name: iOS CI - Build and Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_15.2.app
+
+      - name: Build App for Simulator
+        run: |
+          xcodebuild clean build \
+            -project DigiHunt.xcodeproj \
+            -scheme DigiHunt \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14' \
+            ONLY_ACTIVE_ARCH=YES
+
+      - name: Run Unit Tests
+        run: |
+          xcodebuild test \
+            -project DigiHunt.xcodeproj \
+            -scheme DigiHunt \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14'
+
