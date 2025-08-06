@@ -17,8 +17,9 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_15.2.app
 
-      - name: Build for Simulator
+      - name: Build App for Simulator
         run: |
+          cd DigiHunt
           xcodebuild clean build \
             -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
@@ -28,6 +29,7 @@ jobs:
 
       - name: Run Unit Tests
         run: |
+          cd DigiHunt
           xcodebuild test \
             -project DigiHunt.xcodeproj \
             -scheme DigiHunt \
