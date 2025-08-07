@@ -20,7 +20,7 @@ jobs:
       - name: Build App for Simulator
         run: |
           xcodebuild clean build \
-            -project DigiHunt.xcodeproj \
+            -project IOSAppDeployment/DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 14' \
@@ -29,7 +29,7 @@ jobs:
       - name: Run Unit Tests
         run: |
           xcodebuild test \
-            -project DigiHunt.xcodeproj \
+            -project IOSAppDeployment/DigiHunt.xcodeproj \
             -scheme DigiHunt \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 14'
